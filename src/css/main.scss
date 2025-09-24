@@ -456,6 +456,37 @@ a { color: inherit; }
         fill: currentColor;
       }
 
+      .x-icon {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        flex-shrink: 0;
+        
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          background: currentColor;
+          border-radius: 1px;
+        }
+        
+        &::before {
+          width: 2px;
+          height: 16px;
+          top: 2px;
+          left: 9px;
+          transform: rotate(45deg);
+        }
+        
+        &::after {
+          width: 2px;
+          height: 16px;
+          top: 2px;
+          left: 9px;
+          transform: rotate(-45deg);
+        }
+      }
+
       &:hover { 
         transform: translateY(-2px); 
         background: rgba(255,255,255,.08); 
